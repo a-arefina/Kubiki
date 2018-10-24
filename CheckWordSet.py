@@ -128,8 +128,16 @@ if __name__ == "__main__":
     # cubes3 = (  "mas", "amk", "sak", "smk", "asd")
     # print(check_word_set(('masa',), cubes3))
 
-    print(check_word_set(('папа', 'женя', 'маша'), cubes))
-    print(check_word_set(('зонд', 'цирк', 'ёжик'), cubes))
+    print("This is the ABC blocks set we are using:")
+    for i, cube in enumerate(cubes):
+        print("Block ID {} contains following letters:  {}".format(i, cube))
 
+    print("You can make words {} of these blocks".format(('папа', 'женя', 'маша')))
+    print(check_word_set(('папа', 'женя', 'маша'), cubes))
+    print("But you cannot make {}".format(('папа', 'женя', 'мама')))
     print(check_word_set(('папа', 'женя', 'мама'), cubes))
+
+    print("You can make words {} of these blocks".format(('зонд', 'цирк', 'ёжик')))
+    print(check_word_set(('зонд', 'цирк', 'ёжик'), cubes))
+    print("But you cannot make {}".format(('зонт', 'цирк', 'ёжик')))
     print(check_word_set(('зонт', 'цирк', 'ёжик'), cubes))
